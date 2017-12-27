@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class FirstDetailViewController: AppViewController {
 
@@ -17,6 +18,9 @@ class FirstDetailViewController: AppViewController {
         self.title = "First Detail"
         
         self.addLeft()
+        
+        AlamofireManager.init().test1()
+        self.test1()
     }
     
     func addLeft() {
@@ -35,6 +39,28 @@ class FirstDetailViewController: AppViewController {
     }
     
     
+    
+    func test1() {
+        //参数1：请求方式
+        //参数2：请求路径
+        //参数3：参数列表
+        //参数4：编码方式(参数拼接方式)
+        //参数5：需要设置的请求头的的信息
+        
+        Alamofire.request("http://192.168.199.14:9080/mjyg-purchase-web-client-mobile/app/market/listBy",
+                          method: HTTPMethod.get,
+                          parameters: nil,
+                          encoding: JSONEncoding.default,
+                          headers: nil).responseJSON { (response) in
+                            
+                            print(response)
+                            //是否请求成功
+                            if let jsonValue = response.result.value {
+                                print(jsonValue)
+                            }
+        }
+    }
+        
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

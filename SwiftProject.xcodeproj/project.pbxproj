@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4E5EBE48224519FABF5D03C4 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9324B14F405C1F51EF6933 /* Pods_SwiftProject.framework */; };
+		E674D9851FF33D9F00C4CCA3 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */; };
 		E6764EE31FF0FE7B0072CEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6764EE21FF0FE7B0072CEFC /* AppDelegate.swift */; };
 		E6764EE81FF0FE7B0072CEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6764EE61FF0FE7B0072CEFC /* Main.storyboard */; };
 		E6764EEA1FF0FE7B0072CEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6764EE91FF0FE7B0072CEFC /* Assets.xcassets */; };
@@ -19,7 +20,6 @@
 		E6764F151FF1056F0072CEFC /* SECONDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6764F141FF1056F0072CEFC /* SECONDViewController.swift */; };
 		E6764F171FF105790072CEFC /* THIRDViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6764F161FF105790072CEFC /* THIRDViewController.swift */; };
 		E6764F191FF105800072CEFC /* FOURViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6764F181FF105800072CEFC /* FOURViewController.swift */; };
-		E6B86EC81FF220F90013B731 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B86EC71FF220F90013B731 /* config.swift */; };
 		E6B86ECC1FF225EA0013B731 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B86ECB1FF225EA0013B731 /* AppViewController.swift */; };
 		E6B86ECE1FF2265C0013B731 /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B86ECD1FF2265C0013B731 /* AppView.swift */; };
 		E6B86ED01FF226E30013B731 /* FIRSTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B86ECF1FF226E30013B731 /* FIRSTView.swift */; };
@@ -51,6 +51,7 @@
 		5BF765526273B6F0E60AD458 /* Pods-SwiftProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.release.xcconfig"; sourceTree = "<group>"; };
 		75FDF31373ECF9FAB7133DF8 /* Pods-SwiftProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftProject/Pods-SwiftProject.debug.xcconfig"; sourceTree = "<group>"; };
 		AB9324B14F405C1F51EF6933 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		E6764EDF1FF0FE7B0072CEFC /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6764EE21FF0FE7B0072CEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6764EE71FF0FE7B0072CEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -68,9 +69,6 @@
 		E6764F141FF1056F0072CEFC /* SECONDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SECONDViewController.swift; sourceTree = "<group>"; };
 		E6764F161FF105790072CEFC /* THIRDViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THIRDViewController.swift; sourceTree = "<group>"; };
 		E6764F181FF105800072CEFC /* FOURViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FOURViewController.swift; sourceTree = "<group>"; };
-		E6B86EC51FF21A7C0013B731 /* Define.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Define.h; sourceTree = "<group>"; };
-		E6B86EC61FF220380013B731 /* PrefixHeader_sw.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader_sw.pch; sourceTree = "<group>"; };
-		E6B86EC71FF220F90013B731 /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
 		E6B86ECB1FF225EA0013B731 /* AppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
 		E6B86ECD1FF2265C0013B731 /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
 		E6B86ECF1FF226E30013B731 /* FIRSTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRSTView.swift; sourceTree = "<group>"; };
@@ -124,6 +122,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E674D9821FF33CC900C4CCA3 /* Manages */ = {
+			isa = PBXGroup;
+			children = (
+				E674D9831FF33CEA00C4CCA3 /* AlamofireManager */,
+			);
+			path = Manages;
+			sourceTree = "<group>";
+		};
+		E674D9831FF33CEA00C4CCA3 /* AlamofireManager */ = {
+			isa = PBXGroup;
+			children = (
+				E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */,
+			);
+			path = AlamofireManager;
+			sourceTree = "<group>";
+		};
 		E6764ED61FF0FE7B0072CEFC = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +167,7 @@
 				E6B86EC31FF21A3C0013B731 /* Config */,
 				E6B86EC91FF225AC0013B731 /* VC */,
 				E6B86ECA1FF225CD0013B731 /* View */,
+				E674D9821FF33CC900C4CCA3 /* Manages */,
 				E6764F1A1FF1060A0072CEFC /* BasesVC */,
 				E6764EE61FF0FE7B0072CEFC /* Main.storyboard */,
 				E6764EE91FF0FE7B0072CEFC /* Assets.xcassets */,
@@ -193,9 +208,6 @@
 		E6B86EC31FF21A3C0013B731 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				E6B86EC61FF220380013B731 /* PrefixHeader_sw.pch */,
-				E6B86EC51FF21A7C0013B731 /* Define.h */,
-				E6B86EC71FF220F90013B731 /* config.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -464,7 +476,7 @@
 				E6B86ECC1FF225EA0013B731 /* AppViewController.swift in Sources */,
 				E6764F191FF105800072CEFC /* FOURViewController.swift in Sources */,
 				E6764EE31FF0FE7B0072CEFC /* AppDelegate.swift in Sources */,
-				E6B86EC81FF220F90013B731 /* config.swift in Sources */,
+				E674D9851FF33D9F00C4CCA3 /* AlamofireManager.swift in Sources */,
 				E6764F131FF105600072CEFC /* FIRSTViewController.swift in Sources */,
 				E6764F151FF1056F0072CEFC /* SECONDViewController.swift in Sources */,
 			);
@@ -634,6 +646,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UQKN7ALBDY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";
@@ -654,6 +667,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = UQKN7ALBDY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "";

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewDataSource {
+class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewDataSource,UINavigationControllerDelegate {
     
     //override var kScreenBound: CGRect
     var firstView = FIRSTView.init(frame: kScreenBound)
@@ -31,11 +31,26 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled  = true
+        
+        self.navigationController?.delegate = self
+        
         self.view.backgroundColor = UIColor.yellow
         firstView.firstTableView.delegate = self
         firstView.firstTableView.dataSource=self
         self.view = firstView
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled  = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.navigationController?.interactivePopGestureRecognizer?.isEnabled  = false
+    }
+    
+    
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -92,6 +107,10 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
         
     }
     
+    
+    func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
+        print(viewController)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
