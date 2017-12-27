@@ -40,6 +40,8 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
         firstView.firstTableView.delegate = self
         firstView.firstTableView.dataSource=self
         self.view = firstView
+        
+        self.mjRefreshHead()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -107,11 +109,32 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
         
     }
     
-    
+    //nav delegate
     func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         print(viewController)
     }
-
+    
+    //setting Refresh
+    func mjRefreshHead() {
+        let mjRefreshNormalHeader = MJRefreshNormalHeader.init()
+        mjRefreshNormalHeader.setRefreshingTarget(self, refreshingAction: #selector(self.loadData))
+        mjRefreshNormalHeader.lastUpdatedTimeLabel.isHidden = true
+        mjRefreshNormalHeader.setTitle("下拉刷新", for: MJRefreshState.idle)
+        mjRefreshNormalHeader.setTitle("释放更新", for: MJRefreshState.pulling)
+        mjRefreshNormalHeader.setTitle("加载中...", for: MJRefreshState.refreshing)
+        firstView.firstTableView.mj_header = mjRefreshNormalHeader
+    }
+    
+    @objc func loadData() {
+        print("load data ...")
+        firstArray.insert(["key":"first_1","title":"星星👀"], at: 0)
+        firstView.firstTableView.reloadData()
+        firstView.firstTableView.mj_header.endRefreshing()
+    }
+    
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
