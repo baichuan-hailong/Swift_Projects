@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		4E5EBE48224519FABF5D03C4 /* Pods_SwiftProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB9324B14F405C1F51EF6933 /* Pods_SwiftProject.framework */; };
 		E674D9851FF33D9F00C4CCA3 /* AlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */; };
+		E6759E811FF4846600EFBB60 /* UIView+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6759E801FF4846600EFBB60 /* UIView+extension.swift */; };
+		E6759E831FF4853900EFBB60 /* UIColor+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6759E821FF4853900EFBB60 /* UIColor+extension.swift */; };
+		E6759E851FF48EE800EFBB60 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6759E841FF48EE800EFBB60 /* Define.swift */; };
+		E6759E871FF4923200EFBB60 /* FIRSTDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6759E861FF4923200EFBB60 /* FIRSTDetailView.swift */; };
+		E6759E8A1FF496A600EFBB60 /* ShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6759E891FF496A600EFBB60 /* ShareView.swift */; };
 		E6764EE31FF0FE7B0072CEFC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6764EE21FF0FE7B0072CEFC /* AppDelegate.swift */; };
 		E6764EE81FF0FE7B0072CEFC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E6764EE61FF0FE7B0072CEFC /* Main.storyboard */; };
 		E6764EEA1FF0FE7B0072CEFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E6764EE91FF0FE7B0072CEFC /* Assets.xcassets */; };
@@ -53,6 +58,11 @@
 		AB9324B14F405C1F51EF6933 /* Pods_SwiftProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireManager.swift; sourceTree = "<group>"; };
 		E674D9861FF3A38800C4CCA3 /* Bridging_header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Bridging_header.h; sourceTree = "<group>"; };
+		E6759E801FF4846600EFBB60 /* UIView+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extension.swift"; sourceTree = "<group>"; };
+		E6759E821FF4853900EFBB60 /* UIColor+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+extension.swift"; sourceTree = "<group>"; };
+		E6759E841FF48EE800EFBB60 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		E6759E861FF4923200EFBB60 /* FIRSTDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIRSTDetailView.swift; sourceTree = "<group>"; };
+		E6759E891FF496A600EFBB60 /* ShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareView.swift; sourceTree = "<group>"; };
 		E6764EDF1FF0FE7B0072CEFC /* SwiftProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6764EE21FF0FE7B0072CEFC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E6764EE71FF0FE7B0072CEFC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -126,17 +136,26 @@
 		E674D9821FF33CC900C4CCA3 /* Manages */ = {
 			isa = PBXGroup;
 			children = (
-				E674D9831FF33CEA00C4CCA3 /* AlamofireManager */,
+				E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */,
 			);
 			path = Manages;
 			sourceTree = "<group>";
 		};
-		E674D9831FF33CEA00C4CCA3 /* AlamofireManager */ = {
+		E6759E7F1FF4841F00EFBB60 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				E674D9841FF33D9F00C4CCA3 /* AlamofireManager.swift */,
+				E6759E801FF4846600EFBB60 /* UIView+extension.swift */,
+				E6759E821FF4853900EFBB60 /* UIColor+extension.swift */,
 			);
-			path = AlamofireManager;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		E6759E881FF4968700EFBB60 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E6759E891FF496A600EFBB60 /* ShareView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		E6764ED61FF0FE7B0072CEFC = {
@@ -168,7 +187,9 @@
 				E6B86EC31FF21A3C0013B731 /* Config */,
 				E6B86EC91FF225AC0013B731 /* VC */,
 				E6B86ECA1FF225CD0013B731 /* View */,
+				E6759E881FF4968700EFBB60 /* Components */,
 				E674D9821FF33CC900C4CCA3 /* Manages */,
+				E6759E7F1FF4841F00EFBB60 /* Extension */,
 				E6764F1A1FF1060A0072CEFC /* BasesVC */,
 				E6764EE61FF0FE7B0072CEFC /* Main.storyboard */,
 				E6764EE91FF0FE7B0072CEFC /* Assets.xcassets */,
@@ -210,6 +231,7 @@
 			isa = PBXGroup;
 			children = (
 				E674D9861FF3A38800C4CCA3 /* Bridging_header.h */,
+				E6759E841FF48EE800EFBB60 /* Define.swift */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -221,8 +243,6 @@
 				E6B86EDA1FF24C4D0013B731 /* Second */,
 				E6B86EDB1FF24C5B0013B731 /* Third */,
 				E6B86EDC1FF24C6D0013B731 /* FOUR */,
-				E6764F141FF1056F0072CEFC /* SECONDViewController.swift */,
-				E6764F161FF105790072CEFC /* THIRDViewController.swift */,
 				E6764F181FF105800072CEFC /* FOURViewController.swift */,
 			);
 			path = VC;
@@ -233,6 +253,7 @@
 			children = (
 				E6B86ECF1FF226E30013B731 /* FIRSTView.swift */,
 				E6B86ED71FF235760013B731 /* FirstTableViewCell.swift */,
+				E6759E861FF4923200EFBB60 /* FIRSTDetailView.swift */,
 				E6B86ED11FF226FD0013B731 /* SECONDView.swift */,
 				E6B86ED31FF227080013B731 /* THIRDView.swift */,
 				E6B86ED51FF227130013B731 /* FOURView.swift */,
@@ -252,6 +273,7 @@
 		E6B86EDA1FF24C4D0013B731 /* Second */ = {
 			isa = PBXGroup;
 			children = (
+				E6764F141FF1056F0072CEFC /* SECONDViewController.swift */,
 			);
 			path = Second;
 			sourceTree = "<group>";
@@ -259,6 +281,7 @@
 		E6B86EDB1FF24C5B0013B731 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				E6764F161FF105790072CEFC /* THIRDViewController.swift */,
 			);
 			path = Third;
 			sourceTree = "<group>";
@@ -466,14 +489,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6759E8A1FF496A600EFBB60 /* ShareView.swift in Sources */,
 				E6B86ED41FF227080013B731 /* THIRDView.swift in Sources */,
 				E6764F171FF105790072CEFC /* THIRDViewController.swift in Sources */,
+				E6759E811FF4846600EFBB60 /* UIView+extension.swift in Sources */,
 				E6B86EDE1FF24CBF0013B731 /* FirstDetailViewController.swift in Sources */,
 				E6B86ED21FF226FD0013B731 /* SECONDView.swift in Sources */,
+				E6759E871FF4923200EFBB60 /* FIRSTDetailView.swift in Sources */,
 				E6B86ED01FF226E30013B731 /* FIRSTView.swift in Sources */,
+				E6759E831FF4853900EFBB60 /* UIColor+extension.swift in Sources */,
 				E6764F111FF100160072CEFC /* AppTabBarController.swift in Sources */,
 				E6B86ED61FF227130013B731 /* FOURView.swift in Sources */,
 				E6B86ED81FF235760013B731 /* FirstTableViewCell.swift in Sources */,
+				E6759E851FF48EE800EFBB60 /* Define.swift in Sources */,
 				E6B86ECE1FF2265C0013B731 /* AppView.swift in Sources */,
 				E6B86ECC1FF225EA0013B731 /* AppViewController.swift in Sources */,
 				E6764F191FF105800072CEFC /* FOURViewController.swift in Sources */,

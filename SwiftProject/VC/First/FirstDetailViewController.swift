@@ -9,8 +9,10 @@
 import UIKit
 import Alamofire
 
-class FirstDetailViewController: AppViewController {
+class FirstDetailViewController: AppViewController,HLShareViewDelegate {
 
+    var firstDetailView = FIRSTDetailView.init(frame: kScreenBound)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +20,10 @@ class FirstDetailViewController: AppViewController {
         self.title = "First Detail"
         
         self.addLeft()
+        self.view = firstDetailView
+        firstDetailView.shareBtn.addTarget(self,
+                                           action: #selector(self.shareBtnClick(sender:)),
+                                           for: UIControlEvents.touchUpInside)
         
         AlamofireManager.init().test1()
         self.test1()
@@ -38,6 +44,35 @@ class FirstDetailViewController: AppViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
+    
+    @objc func shareBtnClick(sender:UIButton) {
+        print("share")
+        let shareView = ShareView.init(frame: CGRect.init(x: 0, y: 0, width: kScreenWidth, height: kScreenHeight))
+        shareView.delegate = self
+        shareView.shareShow()
+    }
+    
+    func shareViewDicSelectButWithTag(view: UIView, btnTag: NSInteger) {
+        print(btnTag)
+        
+        self.myAlert(index: btnTag)
+    }
+    
+    
+    func myAlert(index:NSInteger) {
+        
+        let alertController = UIAlertController(title: "提示",
+                                                message: "Click"+String(index),
+                                                preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
+        let okAction = UIAlertAction(title: "好的", style: .default, handler: {
+            action in
+            print("点击了确定")
+        })
+        alertController.addAction(cancelAction)
+        alertController.addAction(okAction)
+        self.present(alertController, animated: true, completion: nil)
+    }
     
     
     func test1() {

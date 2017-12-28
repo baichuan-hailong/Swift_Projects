@@ -28,6 +28,12 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
                       ["key":"first_11","title":"汽车"],
                       ["key":"first_12","title":"视频"]];
     
+    override func loadView() {
+        firstView.firstTableView.delegate = self
+        firstView.firstTableView.dataSource=self
+        self.view = firstView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,12 +42,10 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
         
         self.navigationController?.delegate = self
         
-        self.view.backgroundColor = UIColor.yellow
-        firstView.firstTableView.delegate = self
-        firstView.firstTableView.dataSource=self
-        self.view = firstView
+        
         
         self.mjRefreshHead()
+        self.mjRefreshFooter()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -125,11 +129,28 @@ class FIRSTViewController: AppViewController,UITableViewDelegate,UITableViewData
         firstView.firstTableView.mj_header = mjRefreshNormalHeader
     }
     
+    func mjRefreshFooter() {
+        let footer = MJRefreshBackNormalFooter.init()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(self.loadMoreData))
+        //footer.lastUpdatedTimeLabel.isHidden = true
+        footer.setTitle("正在努力加载更多数据...", for: MJRefreshState.noMoreData)
+        footer.setTitle("已经加载全部数据", for: MJRefreshState.noMoreData)
+        firstView.firstTableView.mj_footer = footer
+        
+    }
+    
     @objc func loadData() {
         print("load data ...")
         firstArray.insert(["key":"first_1","title":"星星👀"], at: 0)
         firstView.firstTableView.reloadData()
         firstView.firstTableView.mj_header.endRefreshing()
+    }
+    
+    @objc func loadMoreData() {
+        print("load more data ...")
+        firstArray.append(["key":"first_7","title":"环保"])
+        firstView.firstTableView.reloadData()
+        firstView.firstTableView.mj_footer.endRefreshing()
     }
     
     

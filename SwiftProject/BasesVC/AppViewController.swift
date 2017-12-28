@@ -8,13 +8,7 @@
 
 import UIKit
 
-let kScreenHeight = UIScreen.main.bounds.size.height
-let kScreenWidth  = UIScreen.main.bounds.size.width
-let kScreenBound  = UIScreen.main.bounds
-
 class AppViewController: UIViewController {
-
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()

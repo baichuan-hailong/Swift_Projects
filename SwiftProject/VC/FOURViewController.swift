@@ -10,12 +10,29 @@ import UIKit
 
 class FOURViewController: UIViewController {
 
+    var fourView:FOURView!
+    
+    override func loadView() {
+        self.fourView = FOURView.init(frame: kScreenBound)
+        self.view = self.fourView
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.white
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let defaults = UserDefaults.standard;
+        //write
+        defaults.set("衣带渐宽终不悔", forKey: "name");
+        defaults.synchronize();
+        //read
+        let name = defaults.string(forKey: "name")
+        let switch_bool = defaults.bool(forKey: "bool")
+        print(name!)
+        print(switch_bool)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
